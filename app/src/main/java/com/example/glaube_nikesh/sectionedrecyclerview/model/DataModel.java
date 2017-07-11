@@ -3,7 +3,7 @@ package com.example.glaube_nikesh.sectionedrecyclerview.model;
 import java.util.ArrayList;
 
 /**
- * Created by pratap.kesaboyina on 30-11-2015.
+ * Created by Shivichu on 7/11/2017.
  */
 public class DataModel {
 

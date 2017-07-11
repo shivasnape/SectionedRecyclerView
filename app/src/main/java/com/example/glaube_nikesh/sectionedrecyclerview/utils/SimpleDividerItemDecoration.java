@@ -10,32 +10,34 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class DividerItemDecoration extends RecyclerView.ItemDecoration {
+
+
+public class SimpleDividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private Drawable mDivider;
     private boolean mShowFirstDivider = false;
     private boolean mShowLastDivider = false;
 
 
-    public DividerItemDecoration(Context context, AttributeSet attrs) {
+    public SimpleDividerItemDecoration(Context context, AttributeSet attrs) {
         final TypedArray a = context
                 .obtainStyledAttributes(attrs, new int[]{android.R.attr.listDivider});
         mDivider = a.getDrawable(0);
         a.recycle();
     }
 
-    public DividerItemDecoration(Context context, AttributeSet attrs, boolean showFirstDivider,
+    public SimpleDividerItemDecoration(Context context, AttributeSet attrs, boolean showFirstDivider,
             boolean showLastDivider) {
         this(context, attrs);
         mShowFirstDivider = showFirstDivider;
         mShowLastDivider = showLastDivider;
     }
 
-    public DividerItemDecoration(Drawable divider) {
+    public SimpleDividerItemDecoration(Drawable divider) {
         mDivider = divider;
     }
 
-    public DividerItemDecoration(Drawable divider, boolean showFirstDivider,
+    public SimpleDividerItemDecoration(Drawable divider, boolean showFirstDivider,
             boolean showLastDivider) {
         this(divider);
         mShowFirstDivider = showFirstDivider;

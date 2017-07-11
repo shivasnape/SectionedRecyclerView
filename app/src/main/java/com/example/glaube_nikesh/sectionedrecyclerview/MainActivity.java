@@ -12,13 +12,15 @@ import com.example.glaube_nikesh.sectionedrecyclerview.model.DataModel;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Created by Shivichu on 7/11/2017.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-
-
     List<DataModel> allSampleData;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
         populateSampleData();
-
 
         RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
        /* my_recycler_view.addItemDecoration(
                 new DividerItemDecoration(this, null));*/
 
-
         RecyclerViewSectionAdapter adapter = new RecyclerViewSectionAdapter(allSampleData);
-
 
         GridLayoutManager manager = new GridLayoutManager(this, getResources().getInteger(R.integer.grid_span_1));
 

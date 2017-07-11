@@ -14,6 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * Created by Shivichu on 7/11/2017.
+ */
+
+
 public class RecyclerViewSectionAdapter2 extends SectionedRecyclerViewAdapter<RecyclerViewSectionAdapter2.DataViewHolder> {
 
 
