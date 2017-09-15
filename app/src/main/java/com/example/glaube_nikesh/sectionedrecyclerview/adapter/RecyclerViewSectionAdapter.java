@@ -8,10 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.example.glaube_nikesh.sectionedrecyclerview.R;
 import com.example.glaube_nikesh.sectionedrecyclerview.model.DataModel;
-import com.example.glaube_nikesh.sectionedrecyclerview.adapter.SectionedRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +25,7 @@ public class RecyclerViewSectionAdapter extends SectionedRecyclerViewAdapter<Rec
 
     private List<DataModel> allData;
 
-
     public RecyclerViewSectionAdapter(List<DataModel> data) {
-
         this.allData = data;
     }
 
@@ -41,7 +37,6 @@ public class RecyclerViewSectionAdapter extends SectionedRecyclerViewAdapter<Rec
 
     @Override
     public int getItemCount(int section) {
-
         return allData.get(section).getAllItemsInSection().size();
 
     }
@@ -58,13 +53,9 @@ public class RecyclerViewSectionAdapter extends SectionedRecyclerViewAdapter<Rec
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int section, int relativePosition, int absolutePosition) {
 
         ArrayList<String> itemsInSection = allData.get(section).getAllItemsInSection();
-
         String itemName = itemsInSection.get(relativePosition);
-
         ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-
         itemViewHolder.itemTitle.setText(itemName);
-
         // Try to put a image . for sample i set background color in xml layout file
         // itemViewHolder.itemImage.setBackgroundColor(Color.parseColor("#01579b"));
     }
@@ -104,9 +95,7 @@ public class RecyclerViewSectionAdapter extends SectionedRecyclerViewAdapter<Rec
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
 
         final TextView itemTitle;
-
         final ImageView itemImage;
-
 
         public ItemViewHolder(View itemView) {
             super(itemView);

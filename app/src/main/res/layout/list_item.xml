@@ -32,7 +32,7 @@
                android:layout_width="56dp"
                android:layout_height="56dp"
                android:layout_centerVertical="true"
-               android:background="@color/teal_200"
+               android:src="@drawable/box"
                android:layout_marginRight="20dp"/>
 
        </RelativeLayout>

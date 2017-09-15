@@ -39,20 +39,8 @@ public class MainActivity extends AppCompatActivity {
         populateSampleData();
 
         RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
-       /* my_recycler_view.addItemDecoration(
-                new DividerItemDecoration(this, null));*/
-
         RecyclerViewSectionAdapter adapter = new RecyclerViewSectionAdapter(allSampleData);
-
         GridLayoutManager manager = new GridLayoutManager(this, getResources().getInteger(R.integer.grid_span_1));
-
-
-     /*   GridLayoutManager manager = new GridLayoutManager(this,
-                getResources().getInteger(R.integer.grid_span_2));
-
-
-        GridLayoutManager manager = new GridLayoutManager(this,
-                getResources().getInteger(R.integer.grid_span_3));*/
 
         my_recycler_view.setLayoutManager(manager);
         adapter.setLayoutManager(manager);
