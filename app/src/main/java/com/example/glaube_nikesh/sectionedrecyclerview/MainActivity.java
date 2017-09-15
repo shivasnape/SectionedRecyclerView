@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    List<DataModel> allSampleData;
+    List<DataModel> dataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +29,17 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        allSampleData = new ArrayList<DataModel>();
+        dataList = new ArrayList<DataModel>();
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             toolbar.setTitle("Section RecyclerView");
 
         }
 
-        populateSampleData();
+       initView();
 
         RecyclerView my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_view);
-        RecyclerViewSectionAdapter adapter = new RecyclerViewSectionAdapter(allSampleData);
+        RecyclerViewSectionAdapter adapter = new RecyclerViewSectionAdapter(dataList);
         GridLayoutManager manager = new GridLayoutManager(this, getResources().getInteger(R.integer.grid_span_1));
 
         my_recycler_view.setLayoutManager(manager);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void populateSampleData() {
+    private void initView() {
 
         for (int i = 1; i <= 10; i++) {
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             dm.setAllItemsInSection(singleItem);
 
-            allSampleData.add(dm);
+            dataList.add(dm);
 
         }
     }
